@@ -5,7 +5,7 @@ Handcraft-Beta App Design Project - README
 
 ###### Last Edit by: `Cyrus Simons`
 
-**Brainstorm README gist:** [gist link](https://gist.github.com/cjsproject/f28f1030a4f81257d9342e887fd2a866)
+###### Brainstorm README gist: [gist link](https://gist.github.com/cjsproject/f28f1030a4f81257d9342e887fd2a866)
 
 ## Table of Contents
 1. [Overview](#Overview)
