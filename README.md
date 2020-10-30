@@ -5,6 +5,8 @@ Handcraft-Beta App Design Project - README
 
 ###### Last Edit by: `Cyrus Simons`
 
+###### Brainstorm README gist: `https://gist.github.com/cjsproject/f28f1030a4f81257d9342e887fd2a866`
+
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
@@ -92,7 +94,7 @@ Marketplace style iOS app that allows anyone to buy, sell, post and like hand ma
 
 ## Wireframes
 
-<img src="https://i.ibb.co/rpBMgSr/Marketplace-Wireframe.jpg" width=600>
+<img src="https://i.ibb.co/rpBMgSr/Marketplace-Wireframe.jpg" width=612>
 
 
 ### [BONUS] Digital Wireframes & Mockups
