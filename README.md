@@ -92,7 +92,7 @@ Marketplace style iOS app that allows anyone to buy, sell, post and like hand ma
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="Yhttps://github.com/Handcraft-Marketplace/Handcraft-Beta/blob/main/Marketplace%20Wireframe.pdf" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
