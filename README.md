@@ -105,9 +105,38 @@ Marketplace style iOS app that allows anyone to buy, sell, post and like hand ma
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
+
 ### Models
-[Add table of models]
+
+**user**
+| Property      | Type     | Description |
+| ------------- | -------- | ------------|
+| userid        | String   | unique id for the user (default field) |
+| phone         | String   | user phone number |
+| username      | String   | user custom name (may be unique?) |
+| profimg       | string/ur| user custom profile image |
+| password      | String   | secure storage of password for user |
+| age           | Number   | age of user |
+| first         | String   | firstname of user |
+| last          | String   | lastname of user |
+| style         | String   | general interest/ categories/ selling preference |
+| created       | DateTime | date when user signs up |
+
+
+**Posts**
+| Property      | Type     | Description |
+| ------------- | -------- | ------------|
+| postid        | String   | unique id for the post (default field) |
+| owner         | String   | userid reference (default field) |
+| title         | String   | Listing title |
+| price         | Number   | price of item |
+| category      | string/ur| type of item |
+| desc          | String   | describes listing |
+| created       | DateTime | date when post was created |
+
+**App Settings**
+*tentative*
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
