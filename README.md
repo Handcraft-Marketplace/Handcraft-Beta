@@ -94,10 +94,13 @@ Marketplace style iOS app that allows anyone to buy, sell, post and like hand ma
 
 ## Wireframes
 
-<img src="https://i.ibb.co/rpBMgSr/Marketplace-Wireframe.jpg" width=612>
+<img src="http://g.recordit.co/5Qb2dGPMpD.gif" width=612>
 
 
 ### [BONUS] Digital Wireframes & Mockups
+
+<img src="http://g.recordit.co/0E162l1qFe.gif" width=612>
+
 
 ### [BONUS] Interactive Prototype
 
