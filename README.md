@@ -123,7 +123,7 @@ Marketplace style iOS app that allows anyone to buy, sell, post and like hand ma
 | created       | DateTime | date when user signs up |
 
 
-**Posts**
+**Listing**
 | Property      | Type     | Description |
 | ------------- | -------- | ------------|
 | postid        | String   | unique id for the post (default field) |
@@ -138,31 +138,48 @@ Marketplace style iOS app that allows anyone to buy, sell, post and like hand ma
 *tentative*
 
 ### Networking
+ - Home Screen
+  -(Read/GET) login
+```swift
+  let uName = usernameField.text!
+  let password = passwordField.text!
+
+  PFUser.logInWithUsername(inBackground: uName, password: password) { (user, error) in
+      if user != nil{
+          self.performSegue(withIdentifier: "loginSegue", sender: nil)
+      } else{
+          let error = error
+          let errorString = error?.localizedDescription
+          // Show the errorString somewhere and let the user try again.
+          print("\(String(describing: errorString))")
+      }
+  }
+  ```
+  
+  -(Create/POST) signup
  - Home Feed Screen
     - (Read/GET) Query all posts where user is author
-       ```swift
-       let query = PFQuery(className:"Post")
-       query.whereKey("author", equalTo: currentUser)
-       query.order(byDescending: "createdAt")
-       query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
-          if let error = error { 
-             print(error.localizedDescription)
-          } else if let posts = posts {
-             print("Successfully retrieved \(posts.count) posts.")
-         // TODO: Do something with posts...
-          }
-       }
-       ```
+    ```swift
+     let query = PFQuery(className:"Listing")
+     query.whereKey("owner", equalTo: currentUser)
+     query.order(byDescending: "created")
+     query.findObjectsInBackground { (listigs: [PFObject]?, error: Error?) in
+        if let error = error { 
+           print(error.localizedDescription)
+        } else if let listings = listings {
+           print("Successfully retrieved \(listings.count) posts.")
+       // TODO: Do something with posts...
+        }
+     }
+     ```
+
     - (Create/POST) Create a new like on a post
     - (Delete) Delete existing like
-    - (Create/POST) Create a new comment on a post
-    - (Delete) Delete existing comment
- - Create Post Screen
-    - (Create/POST) Create a new post object
+    - (Create/POST) Create a new purchase
+    - (Delete) cancel purchase
+ - Create Listing Screen
+    - (Create/POST) Create a new Listing object
  - Profile Screen
     - (Read/GET) Query logged in user object
     - (Update/PUT) Update user profile image
 
-
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
