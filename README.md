@@ -182,4 +182,16 @@ Marketplace style iOS app that allows anyone to buy, sell, post and like hand ma
  - Profile Screen
     - (Read/GET) Query logged in user object
     - (Update/PUT) Update user profile image
+    - (Delete) Remove favorites
+    
+#### [OPTIONAL:] Existing API Endpoints
+##### Back4App
+- Base URL - [https://parseapi.back4app.com](https://dashboard.back4app.com/apps)
 
+   HTTP Verb | function | Description
+   ----------|----------|------------
+    `GET`    | login    | Logs user in
+    `UPDATE` | logout   | Logs user out
+    `POST`   | signup   | creates new user object
+    `GET`    | PFQuery(obj).getobjects | get all objects of type 'obj'
+    `POST`   | PFObject(obj).saveinbackground | save new object of type 'obj'
