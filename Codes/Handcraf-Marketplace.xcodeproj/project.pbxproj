@@ -1,0 +1,750 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55D04645FE6851B55B8052A4 /* Pods_Handcraf_MarketplaceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40636893120D617805B30A8D /* Pods_Handcraf_MarketplaceTests.framework */; };
+		A1EA0BECFADFEA56C7CE1C5D /* Pods_Handcraf_Marketplace_Handcraf_MarketplaceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10C00CA604DA219F3FA14BA1 /* Pods_Handcraf_Marketplace_Handcraf_MarketplaceUITests.framework */; };
+		AC915D4205430E683CA8C113 /* Pods_Handcraf_Marketplace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D94514313703F69E59101F7 /* Pods_Handcraf_Marketplace.framework */; };
+		D9B7434F2555189F000787DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B7434E2555189F000787DC /* AppDelegate.swift */; };
+		D9B743512555189F000787DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B743502555189F000787DC /* SceneDelegate.swift */; };
+		D9B743562555189F000787DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B743542555189F000787DC /* Main.storyboard */; };
+		D9B74358255518A1000787DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B74357255518A1000787DC /* Assets.xcassets */; };
+		D9B7435B255518A1000787DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B74359255518A1000787DC /* LaunchScreen.storyboard */; };
+		D9B74366255518A1000787DC /* Handcraf_MarketplaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B74365255518A1000787DC /* Handcraf_MarketplaceTests.swift */; };
+		D9B74371255518A1000787DC /* Handcraf_MarketplaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B74370255518A1000787DC /* Handcraf_MarketplaceUITests.swift */; };
+		D9B7439125560F06000787DC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B7439025560F06000787DC /* LoginViewController.swift */; };
+		D9B7439925560F3A000787DC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B7439825560F3A000787DC /* FeedViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D9B74362255518A1000787DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9B743432555189E000787DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9B7434A2555189F000787DC;
+			remoteInfo = "Handcraf-Marketplace";
+		};
+		D9B7436D255518A1000787DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9B743432555189E000787DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9B7434A2555189F000787DC;
+			remoteInfo = "Handcraf-Marketplace";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		10C00CA604DA219F3FA14BA1 /* Pods_Handcraf_Marketplace_Handcraf_MarketplaceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Handcraf_Marketplace_Handcraf_MarketplaceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2017680C9BE93F52D73A275B /* Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests.debug.xcconfig"; path = "Target Support Files/Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests/Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		40636893120D617805B30A8D /* Pods_Handcraf_MarketplaceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Handcraf_MarketplaceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D94514313703F69E59101F7 /* Pods_Handcraf_Marketplace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Handcraf_Marketplace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9377AAC3325E17D8F9A7B8F0 /* Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests.release.xcconfig"; path = "Target Support Files/Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests/Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B73008C23AEFFC5D28463D0A /* Pods-Handcraf-MarketplaceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handcraf-MarketplaceTests.debug.xcconfig"; path = "Target Support Files/Pods-Handcraf-MarketplaceTests/Pods-Handcraf-MarketplaceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D9B7434B2555189F000787DC /* Handcraf-Marketplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Handcraf-Marketplace.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9B7434E2555189F000787DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D9B743502555189F000787DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D9B743552555189F000787DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D9B74357255518A1000787DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D9B7435A255518A1000787DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D9B7435C255518A1000787DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9B74361255518A1000787DC /* Handcraf-MarketplaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Handcraf-MarketplaceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9B74365255518A1000787DC /* Handcraf_MarketplaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handcraf_MarketplaceTests.swift; sourceTree = "<group>"; };
+		D9B74367255518A1000787DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9B7436C255518A1000787DC /* Handcraf-MarketplaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Handcraf-MarketplaceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9B74370255518A1000787DC /* Handcraf_MarketplaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handcraf_MarketplaceUITests.swift; sourceTree = "<group>"; };
+		D9B74372255518A1000787DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9B7439025560F06000787DC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D9B7439825560F3A000787DC /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		DDD0E9B13B170A23CCDFDA0B /* Pods-Handcraf-Marketplace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handcraf-Marketplace.debug.xcconfig"; path = "Target Support Files/Pods-Handcraf-Marketplace/Pods-Handcraf-Marketplace.debug.xcconfig"; sourceTree = "<group>"; };
+		F4E4631EC70BEBE1A3031629 /* Pods-Handcraf-Marketplace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handcraf-Marketplace.release.xcconfig"; path = "Target Support Files/Pods-Handcraf-Marketplace/Pods-Handcraf-Marketplace.release.xcconfig"; sourceTree = "<group>"; };
+		FB0CAD02AA25329184D91557 /* Pods-Handcraf-MarketplaceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handcraf-MarketplaceTests.release.xcconfig"; path = "Target Support Files/Pods-Handcraf-MarketplaceTests/Pods-Handcraf-MarketplaceTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D9B743482555189F000787DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC915D4205430E683CA8C113 /* Pods_Handcraf_Marketplace.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9B7435E255518A1000787DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55D04645FE6851B55B8052A4 /* Pods_Handcraf_MarketplaceTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9B74369255518A1000787DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1EA0BECFADFEA56C7CE1C5D /* Pods_Handcraf_Marketplace_Handcraf_MarketplaceUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30BEC26007D9E891D0E8C65C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D94514313703F69E59101F7 /* Pods_Handcraf_Marketplace.framework */,
+				10C00CA604DA219F3FA14BA1 /* Pods_Handcraf_Marketplace_Handcraf_MarketplaceUITests.framework */,
+				40636893120D617805B30A8D /* Pods_Handcraf_MarketplaceTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5CC193023A79ACF62B8AA4E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DDD0E9B13B170A23CCDFDA0B /* Pods-Handcraf-Marketplace.debug.xcconfig */,
+				F4E4631EC70BEBE1A3031629 /* Pods-Handcraf-Marketplace.release.xcconfig */,
+				2017680C9BE93F52D73A275B /* Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests.debug.xcconfig */,
+				9377AAC3325E17D8F9A7B8F0 /* Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests.release.xcconfig */,
+				B73008C23AEFFC5D28463D0A /* Pods-Handcraf-MarketplaceTests.debug.xcconfig */,
+				FB0CAD02AA25329184D91557 /* Pods-Handcraf-MarketplaceTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D9B743422555189E000787DC = {
+			isa = PBXGroup;
+			children = (
+				D9B7434D2555189F000787DC /* Handcraf-Marketplace */,
+				D9B74364255518A1000787DC /* Handcraf-MarketplaceTests */,
+				D9B7436F255518A1000787DC /* Handcraf-MarketplaceUITests */,
+				D9B7434C2555189F000787DC /* Products */,
+				5CC193023A79ACF62B8AA4E6 /* Pods */,
+				30BEC26007D9E891D0E8C65C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D9B7434C2555189F000787DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9B7434B2555189F000787DC /* Handcraf-Marketplace.app */,
+				D9B74361255518A1000787DC /* Handcraf-MarketplaceTests.xctest */,
+				D9B7436C255518A1000787DC /* Handcraf-MarketplaceUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9B7434D2555189F000787DC /* Handcraf-Marketplace */ = {
+			isa = PBXGroup;
+			children = (
+				D9B7434E2555189F000787DC /* AppDelegate.swift */,
+				D9B743502555189F000787DC /* SceneDelegate.swift */,
+				D9B743542555189F000787DC /* Main.storyboard */,
+				D9B74357255518A1000787DC /* Assets.xcassets */,
+				D9B74359255518A1000787DC /* LaunchScreen.storyboard */,
+				D9B7435C255518A1000787DC /* Info.plist */,
+				D9B7439025560F06000787DC /* LoginViewController.swift */,
+				D9B7439825560F3A000787DC /* FeedViewController.swift */,
+			);
+			path = "Handcraf-Marketplace";
+			sourceTree = "<group>";
+		};
+		D9B74364255518A1000787DC /* Handcraf-MarketplaceTests */ = {
+			isa = PBXGroup;
+			children = (
+				D9B74365255518A1000787DC /* Handcraf_MarketplaceTests.swift */,
+				D9B74367255518A1000787DC /* Info.plist */,
+			);
+			path = "Handcraf-MarketplaceTests";
+			sourceTree = "<group>";
+		};
+		D9B7436F255518A1000787DC /* Handcraf-MarketplaceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D9B74370255518A1000787DC /* Handcraf_MarketplaceUITests.swift */,
+				D9B74372255518A1000787DC /* Info.plist */,
+			);
+			path = "Handcraf-MarketplaceUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D9B7434A2555189F000787DC /* Handcraf-Marketplace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9B74375255518A1000787DC /* Build configuration list for PBXNativeTarget "Handcraf-Marketplace" */;
+			buildPhases = (
+				E4FD6CD58020D4107BD518E5 /* [CP] Check Pods Manifest.lock */,
+				D9B743472555189F000787DC /* Sources */,
+				D9B743482555189F000787DC /* Frameworks */,
+				D9B743492555189F000787DC /* Resources */,
+				09E25BB17F1CC531A8922A34 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Handcraf-Marketplace";
+			productName = "Handcraf-Marketplace";
+			productReference = D9B7434B2555189F000787DC /* Handcraf-Marketplace.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D9B74360255518A1000787DC /* Handcraf-MarketplaceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9B74378255518A1000787DC /* Build configuration list for PBXNativeTarget "Handcraf-MarketplaceTests" */;
+			buildPhases = (
+				37ACBCE527CAC0D0F7079CA0 /* [CP] Check Pods Manifest.lock */,
+				D9B7435D255518A1000787DC /* Sources */,
+				D9B7435E255518A1000787DC /* Frameworks */,
+				D9B7435F255518A1000787DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9B74363255518A1000787DC /* PBXTargetDependency */,
+			);
+			name = "Handcraf-MarketplaceTests";
+			productName = "Handcraf-MarketplaceTests";
+			productReference = D9B74361255518A1000787DC /* Handcraf-MarketplaceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D9B7436B255518A1000787DC /* Handcraf-MarketplaceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9B7437B255518A1000787DC /* Build configuration list for PBXNativeTarget "Handcraf-MarketplaceUITests" */;
+			buildPhases = (
+				9D5E12F9A97C1F9B1D43CB24 /* [CP] Check Pods Manifest.lock */,
+				D9B74368255518A1000787DC /* Sources */,
+				D9B74369255518A1000787DC /* Frameworks */,
+				D9B7436A255518A1000787DC /* Resources */,
+				5946F5704C81F3F48BC56EC3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9B7436E255518A1000787DC /* PBXTargetDependency */,
+			);
+			name = "Handcraf-MarketplaceUITests";
+			productName = "Handcraf-MarketplaceUITests";
+			productReference = D9B7436C255518A1000787DC /* Handcraf-MarketplaceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D9B743432555189E000787DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					D9B7434A2555189F000787DC = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					D9B74360255518A1000787DC = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = D9B7434A2555189F000787DC;
+					};
+					D9B7436B255518A1000787DC = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = D9B7434A2555189F000787DC;
+					};
+				};
+			};
+			buildConfigurationList = D9B743462555189E000787DC /* Build configuration list for PBXProject "Handcraf-Marketplace" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D9B743422555189E000787DC;
+			productRefGroup = D9B7434C2555189F000787DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D9B7434A2555189F000787DC /* Handcraf-Marketplace */,
+				D9B74360255518A1000787DC /* Handcraf-MarketplaceTests */,
+				D9B7436B255518A1000787DC /* Handcraf-MarketplaceUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D9B743492555189F000787DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9B7435B255518A1000787DC /* LaunchScreen.storyboard in Resources */,
+				D9B74358255518A1000787DC /* Assets.xcassets in Resources */,
+				D9B743562555189F000787DC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9B7435F255518A1000787DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9B7436A255518A1000787DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09E25BB17F1CC531A8922A34 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Handcraf-Marketplace/Pods-Handcraf-Marketplace-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Handcraf-Marketplace/Pods-Handcraf-Marketplace-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Handcraf-Marketplace/Pods-Handcraf-Marketplace-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37ACBCE527CAC0D0F7079CA0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Handcraf-MarketplaceTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5946F5704C81F3F48BC56EC3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests/Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests/Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests/Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D5E12F9A97C1F9B1D43CB24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4FD6CD58020D4107BD518E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Handcraf-Marketplace-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D9B743472555189F000787DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9B7439125560F06000787DC /* LoginViewController.swift in Sources */,
+				D9B7434F2555189F000787DC /* AppDelegate.swift in Sources */,
+				D9B7439925560F3A000787DC /* FeedViewController.swift in Sources */,
+				D9B743512555189F000787DC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9B7435D255518A1000787DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9B74366255518A1000787DC /* Handcraf_MarketplaceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9B74368255518A1000787DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9B74371255518A1000787DC /* Handcraf_MarketplaceUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D9B74363255518A1000787DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9B7434A2555189F000787DC /* Handcraf-Marketplace */;
+			targetProxy = D9B74362255518A1000787DC /* PBXContainerItemProxy */;
+		};
+		D9B7436E255518A1000787DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9B7434A2555189F000787DC /* Handcraf-Marketplace */;
+			targetProxy = D9B7436D255518A1000787DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D9B743542555189F000787DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9B743552555189F000787DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D9B74359255518A1000787DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9B7435A255518A1000787DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D9B74373255518A1000787DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D9B74374255518A1000787DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D9B74376255518A1000787DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDD0E9B13B170A23CCDFDA0B /* Pods-Handcraf-Marketplace.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Handcraf-Marketplace/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Codepath.Handcraf-Marketplace";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D9B74377255518A1000787DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4E4631EC70BEBE1A3031629 /* Pods-Handcraf-Marketplace.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Handcraf-Marketplace/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Codepath.Handcraf-Marketplace";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D9B74379255518A1000787DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B73008C23AEFFC5D28463D0A /* Pods-Handcraf-MarketplaceTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Handcraf-MarketplaceTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Codepath.Handcraf-MarketplaceTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Handcraf-Marketplace.app/Handcraf-Marketplace";
+			};
+			name = Debug;
+		};
+		D9B7437A255518A1000787DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB0CAD02AA25329184D91557 /* Pods-Handcraf-MarketplaceTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Handcraf-MarketplaceTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Codepath.Handcraf-MarketplaceTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Handcraf-Marketplace.app/Handcraf-Marketplace";
+			};
+			name = Release;
+		};
+		D9B7437C255518A1000787DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2017680C9BE93F52D73A275B /* Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Handcraf-MarketplaceUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Codepath.Handcraf-MarketplaceUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Handcraf-Marketplace";
+			};
+			name = Debug;
+		};
+		D9B7437D255518A1000787DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9377AAC3325E17D8F9A7B8F0 /* Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Handcraf-MarketplaceUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Codepath.Handcraf-MarketplaceUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Handcraf-Marketplace";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D9B743462555189E000787DC /* Build configuration list for PBXProject "Handcraf-Marketplace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9B74373255518A1000787DC /* Debug */,
+				D9B74374255518A1000787DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9B74375255518A1000787DC /* Build configuration list for PBXNativeTarget "Handcraf-Marketplace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9B74376255518A1000787DC /* Debug */,
+				D9B74377255518A1000787DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9B74378255518A1000787DC /* Build configuration list for PBXNativeTarget "Handcraf-MarketplaceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9B74379255518A1000787DC /* Debug */,
+				D9B7437A255518A1000787DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9B7437B255518A1000787DC /* Build configuration list for PBXNativeTarget "Handcraf-MarketplaceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9B7437C255518A1000787DC /* Debug */,
+				D9B7437D255518A1000787DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D9B743432555189E000787DC /* Project object */;
+}

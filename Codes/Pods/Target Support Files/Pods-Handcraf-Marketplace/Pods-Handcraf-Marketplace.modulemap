@@ -1,0 +1,6 @@
+framework module Pods_Handcraf_Marketplace {
+  umbrella header "Pods-Handcraf-Marketplace-umbrella.h"
+
+  export *
+  module * { export * }
+}

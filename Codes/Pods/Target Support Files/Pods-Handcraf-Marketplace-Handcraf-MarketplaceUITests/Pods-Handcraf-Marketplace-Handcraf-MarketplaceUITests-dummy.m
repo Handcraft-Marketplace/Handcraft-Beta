@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_Handcraf_Marketplace_Handcraf_MarketplaceUITests : NSObject
+@end
+@implementation PodsDummy_Pods_Handcraf_Marketplace_Handcraf_MarketplaceUITests
+@end
