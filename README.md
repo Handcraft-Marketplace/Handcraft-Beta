@@ -190,8 +190,8 @@ Marketplace style iOS app that allows anyone to buy, sell, post and like hand ma
 
    HTTP Verb | function | Description
    ----------|----------|------------
-    `GET`    | login    | Logs user in
-    `UPDATE` | logout   | Logs user out
-    `POST`   | signup   | creates new user object
+    `GET`    | PFUser.loginwithusername()    | Logs user in
+    `UPDATE` | PFUser.logout()   | Logs user out
+    `POST`   | PFObject(PFUser).saveinbackground  | creates new user object
     `GET`    | PFQuery(obj).getobjects | get all objects of type 'obj'
     `POST`   | PFObject(obj).saveinbackground | save new object of type 'obj'
