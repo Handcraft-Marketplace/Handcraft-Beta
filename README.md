@@ -195,3 +195,8 @@ Marketplace style iOS app that allows anyone to buy, sell, post and like hand ma
     `POST`   | PFObject(PFUser).saveinbackground  | creates new user object
     `GET`    | PFQuery(obj).getobjects | get all objects of type 'obj'
     `POST`   | PFObject(obj).saveinbackground | save new object of type 'obj'
+    
+    
+#### .gif Progress
+
+<img src="https://i.imgur.com/dKLwy88.gif" width=250>
