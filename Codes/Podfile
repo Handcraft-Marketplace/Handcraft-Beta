@@ -7,6 +7,7 @@ target 'Handcraf-Marketplace' do
 
   # Pods for Handcraf-Marketplace
     pod "Parse"
+    pod "AlamofireImage"
 
   target 'Handcraf-MarketplaceTests' do
     inherit! :search_paths
