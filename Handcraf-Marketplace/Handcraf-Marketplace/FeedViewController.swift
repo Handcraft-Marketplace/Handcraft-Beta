@@ -80,7 +80,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Pass the selected object to the new view controller.
         
         
-      /*  let id = segue.identifier!
+       let id = segue.identifier!
         if id == "PostDetailsViewControllerSegue"{
             //Find the selected post
             let cell = sender as! UITableViewCell
@@ -93,9 +93,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             detailsViewController.post = post
             
             tableView.deselectRow(at: indexPath, animated: true)
-        }*/
+        }
         
-        //Find the selected post
+        /*/Find the selected post
         let cell = sender as! UITableViewCell
         let indexPath = tableView.indexPath(for: cell)!
         let post = posts[indexPath.row]
@@ -105,6 +105,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         detailsViewController.post = post
         
         tableView.deselectRow(at: indexPath, animated: true)
+        */
     }
     
 
