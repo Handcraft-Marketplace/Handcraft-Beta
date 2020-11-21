@@ -10,18 +10,18 @@ import Parse
 import AlamofireImage
 
 class PostDetailsViewController: UIViewController {
-
-    var post = PFObject()
     
     @IBOutlet weak var postDetailsImage: UIImageView!
     @IBOutlet weak var postDetailsTitleLabel: UILabel!
     @IBOutlet weak var postDetailsPriceLabel: UILabel!
     @IBOutlet weak var postDetailsCategoryLabel: UILabel!
     @IBOutlet weak var postDetailsDescriptionLabel: UILabel!
+
+    var post: PFObject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         // Do any additional setup after loading the view.
         
@@ -39,7 +39,7 @@ class PostDetailsViewController: UIViewController {
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
         
-        postDetailsImage.af_setImage(withURL: url)
+        postDetailsImage.af.setImage(withURL: url)
         
     }
     

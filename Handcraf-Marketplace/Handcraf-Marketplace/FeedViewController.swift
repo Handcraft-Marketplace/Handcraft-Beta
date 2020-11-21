@@ -51,13 +51,15 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let post = posts[indexPath.row]
         let user = post["author"] as! PFUser
         cell.usernameLabel.text = user.username
-        cell.descriptionLabel.text = post["description"] as! String
+        cell.descriptionLabel.text = post["description"] as? String
         
         let imageFile = post["image"] as! PFFileObject
+        
         let urlString = imageFile.url!
         let url = URL(string: urlString)!
         
-        cell.photoView.af_setImage(withURL: url)
+        cell.photoView.af.setImage(withURL: url)
+        
         
         return cell
     }
@@ -78,15 +80,14 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        let id = segue.identifier!
         
-        
-       let id = segue.identifier!
         if id == "PostDetailsViewControllerSegue"{
             //Find the selected post
             let cell = sender as! UITableViewCell
             let indexPath = tableView.indexPath(for: cell)!
             let post = posts[indexPath.row]
-        
+            
             //Pass the selected movie to the details view controller
             let detailsViewController = segue.destination as! PostDetailsViewController
             
@@ -94,18 +95,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             tableView.deselectRow(at: indexPath, animated: true)
         }
-        
-        /*/Find the selected post
-        let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPath(for: cell)!
-        let post = posts[indexPath.row]
-    
-        //Pass the selected movie to the details view controller
-        let detailsViewController = segue.destination as! PostDetailsViewController
-        detailsViewController.post = post
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-        */
+
     }
     
 
