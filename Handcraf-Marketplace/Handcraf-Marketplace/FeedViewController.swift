@@ -50,8 +50,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
         let post = posts[indexPath.row]
         let user = post["author"] as! PFUser
-        cell.usernameLabel.text = user.username
-        cell.descriptionLabel.text = post["description"] as? String
+        
+        cell.userLabel.text = user.username
+        cell.titleLabel.text = post["title"] as? String
+        cell.priceLabel.text = "$\((post["price"] as? String) ?? "0")"
+        cell.descLabel.text = post["description"] as? String
         
         let imageFile = post["image"] as! PFFileObject
         
