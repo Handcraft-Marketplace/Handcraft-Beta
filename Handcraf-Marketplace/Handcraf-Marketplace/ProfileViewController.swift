@@ -16,12 +16,20 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var lastNameField: UITextField!
     @IBOutlet weak var phoneNumberField: UITextField!
     @IBOutlet weak var styleField: UITextField!
+    @IBOutlet weak var savedLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        savedLabel.text = ""
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        savedLabel.text = ""
+        
     }
     
     @IBAction func onChangeButton(_ sender: Any) {
@@ -40,7 +48,12 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         updatedUser.saveInBackground { (success, error) in
             if success{
-                self.dismiss(animated: true, completion: nil)
+                self.firstNameField.text = ""
+                self.lastNameField.text = ""
+                self.phoneNumberField.text = ""
+                self.styleField.text = ""
+                self.savedLabel.text = "Updated!"
+                //self.dismiss(animated: true, completion: nil)
                 print("Saved!")
             } else{
                 print("Error!")
