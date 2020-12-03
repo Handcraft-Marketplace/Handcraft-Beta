@@ -45,10 +45,14 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
+    /*
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }*/
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
-        let post = posts[indexPath.row]
+        let post = posts[posts.count - (indexPath.row + 1)]
         let user = post["author"] as! PFUser
         
         cell.userLabel.text = user.username
@@ -58,10 +62,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let imageFile = post["image"] as! PFFileObject
         
-        let urlString = imageFile.url!
-        let url = URL(string: urlString)!
-        
-        cell.photoView.af.setImage(withURL: url)
+        let imgurl = URL(string: imageFile.url!)!
+
+        cell.photoView.af.setImage(withURL: imgurl)
         
         
         return cell
