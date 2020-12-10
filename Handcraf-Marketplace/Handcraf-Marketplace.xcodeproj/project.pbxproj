@@ -10,8 +10,10 @@
 		55D04645FE6851B55B8052A4 /* Pods_Handcraf_MarketplaceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40636893120D617805B30A8D /* Pods_Handcraf_MarketplaceTests.framework */; };
 		A1EA0BECFADFEA56C7CE1C5D /* Pods_Handcraf_Marketplace_Handcraf_MarketplaceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10C00CA604DA219F3FA14BA1 /* Pods_Handcraf_Marketplace_Handcraf_MarketplaceUITests.framework */; };
 		AC915D4205430E683CA8C113 /* Pods_Handcraf_Marketplace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D94514313703F69E59101F7 /* Pods_Handcraf_Marketplace.framework */; };
+		CF99E5E925803A230043DDF2 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF99E5E825803A230043DDF2 /* ProfileCell.swift */; };
+		CF99E5EE25803A6C0043DDF2 /* ProfileTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF99E5ED25803A6C0043DDF2 /* ProfileTabViewController.swift */; };
+		CF99E5F62581B7B30043DDF2 /* ProfilePostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF99E5F52581B7B20043DDF2 /* ProfilePostCell.swift */; };
 		D94ABAA7255F4BE4008C700E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94ABAA6255F4BE4008C700E /* ProfileViewController.swift */; };
-		D94ABAAC255F4C22008C700E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94ABAAB255F4C22008C700E /* SettingViewController.swift */; };
 		D94ABAB1256090B8008C700E /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94ABAB0256090B8008C700E /* CartViewController.swift */; };
 		D94ABAB6256090E6008C700E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94ABAB5256090E6008C700E /* CameraViewController.swift */; };
 		D94ABAC62560C62D008C700E /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94ABAC52560C62D008C700E /* PostCell.swift */; };
@@ -51,8 +53,10 @@
 		7D94514313703F69E59101F7 /* Pods_Handcraf_Marketplace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Handcraf_Marketplace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9377AAC3325E17D8F9A7B8F0 /* Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests.release.xcconfig"; path = "Target Support Files/Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests/Pods-Handcraf-Marketplace-Handcraf-MarketplaceUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B73008C23AEFFC5D28463D0A /* Pods-Handcraf-MarketplaceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handcraf-MarketplaceTests.debug.xcconfig"; path = "Target Support Files/Pods-Handcraf-MarketplaceTests/Pods-Handcraf-MarketplaceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CF99E5E825803A230043DDF2 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		CF99E5ED25803A6C0043DDF2 /* ProfileTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabViewController.swift; sourceTree = "<group>"; };
+		CF99E5F52581B7B20043DDF2 /* ProfilePostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePostCell.swift; sourceTree = "<group>"; };
 		D94ABAA6255F4BE4008C700E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		D94ABAAB255F4C22008C700E /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		D94ABAB0256090B8008C700E /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		D94ABAB5256090E6008C700E /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		D94ABAC52560C62D008C700E /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
@@ -162,11 +166,13 @@
 				D9B7439025560F06000787DC /* LoginViewController.swift */,
 				D9B7439825560F3A000787DC /* FeedViewController.swift */,
 				D94ABAA6255F4BE4008C700E /* ProfileViewController.swift */,
-				D94ABAAB255F4C22008C700E /* SettingViewController.swift */,
 				D94ABAB0256090B8008C700E /* CartViewController.swift */,
 				D94ABAB5256090E6008C700E /* CameraViewController.swift */,
 				D94ABAC52560C62D008C700E /* PostCell.swift */,
 				D9F527C7256270C800586B1D /* PostDetailsViewController.swift */,
+				CF99E5E825803A230043DDF2 /* ProfileCell.swift */,
+				CF99E5ED25803A6C0043DDF2 /* ProfileTabViewController.swift */,
+				CF99E5F52581B7B20043DDF2 /* ProfilePostCell.swift */,
 			);
 			path = "Handcraf-Marketplace";
 			sourceTree = "<group>";
@@ -430,12 +436,14 @@
 				D9B7439125560F06000787DC /* LoginViewController.swift in Sources */,
 				D9B7434F2555189F000787DC /* AppDelegate.swift in Sources */,
 				D94ABAB1256090B8008C700E /* CartViewController.swift in Sources */,
+				CF99E5E925803A230043DDF2 /* ProfileCell.swift in Sources */,
 				D94ABAA7255F4BE4008C700E /* ProfileViewController.swift in Sources */,
 				D9B7439925560F3A000787DC /* FeedViewController.swift in Sources */,
 				D94ABAC62560C62D008C700E /* PostCell.swift in Sources */,
+				CF99E5F62581B7B30043DDF2 /* ProfilePostCell.swift in Sources */,
 				D94ABAB6256090E6008C700E /* CameraViewController.swift in Sources */,
+				CF99E5EE25803A6C0043DDF2 /* ProfileTabViewController.swift in Sources */,
 				D9B743512555189F000787DC /* SceneDelegate.swift in Sources */,
-				D94ABAAC255F4C22008C700E /* SettingViewController.swift in Sources */,
 				D9F527C8256270C800586B1D /* PostDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -45,10 +45,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
-    /*
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }*/
+
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
@@ -92,7 +89,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             //Find the selected post
             let cell = sender as! UITableViewCell
             let indexPath = tableView.indexPath(for: cell)!
-            let post = posts[indexPath.row]
+            let post = posts[posts.count - (indexPath.row + 1)]
             
             //Pass the selected movie to the details view controller
             let detailsViewController = segue.destination as! PostDetailsViewController
