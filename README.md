@@ -199,4 +199,11 @@ Marketplace style iOS app that allows anyone to buy, sell, post and like hand ma
     
 #### .gif Progress
 
+##### Main display
+
 <img src="http://g.recordit.co/5GNgmg8Ijw.gif" width=250>
+
+##### Profile and User Edits
+
+<img src="http://g.recordit.co/URMPhJLhnh.gif" width=250>
+

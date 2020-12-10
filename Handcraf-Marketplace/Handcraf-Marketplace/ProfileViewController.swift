@@ -18,6 +18,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var styleField: UITextField!
     @IBOutlet weak var savedLabel: UILabel!
     
+    var currentUser = PFUser.current()!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,18 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBAction func onChangeButton(_ sender: Any) {
         let updatedUser = PFObject(className: "Users")
         
+        let query = PFQuery(className:"Users")
+        query.includeKey("author")
+        query.whereKey("author", equalTo: PFUser.current()!)
+        
+        query.findObjectsInBackground { (users, error) in
+            if users !=  nil{
+                for i in users!{
+                    try! i.delete()
+                }
+                }
+            }
+        
         updatedUser["firstName"] = firstNameField.text!
         updatedUser["lastName"] = lastNameField.text!
         updatedUser["phoneNumber"] = phoneNumberField.text!
@@ -44,7 +57,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         let imageData = profileImage.image!.pngData()
         let file = PFFileObject(name: "image.png", data: imageData!)
         
-        updatedUser["image"] = file
+        updatedUser["pimage"] = file
         
         updatedUser.saveInBackground { (success, error) in
             if success{
@@ -53,7 +66,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                 self.phoneNumberField.text = ""
                 self.styleField.text = ""
                 self.savedLabel.text = "Updated!"
-                //self.dismiss(animated: true, completion: nil)
+                self.profileImage.image = nil
+
                 print("Saved!")
             } else{
                 print("Error!")
@@ -78,7 +92,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.editedImage] as! UIImage
         let size = CGSize(width: 300, height: 300)
-        let scaledImage = image.af.imageAspectScaled(toFit: size)
+        let scaledImage = image.af.imageAspectScaled(toFill: size)
         
         profileImage.image = scaledImage
         
