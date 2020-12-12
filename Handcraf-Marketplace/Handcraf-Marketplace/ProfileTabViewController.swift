@@ -16,15 +16,15 @@ class ProfileTabViewController: UIViewController, UITableViewDelegate, UITableVi
     var posts = [PFObject]()
     var currentUser = PFUser.current()!
     var userInfo = PFObject(className: "Users")
-    let myRefreshControl = UIRefreshControl()
+    let profileRefresh = UIRefreshControl()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         // Do any additional setup after loading the view.
-        myRefreshControl.addTarget(self, action: #selector(viewDidAppear), for: .valueChanged)
-        tableView.refreshControl = myRefreshControl
+        self.profileRefresh.addTarget(self, action: #selector(viewDidAppear), for: .valueChanged)
+        self.tableView.refreshControl = profileRefresh
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -34,17 +34,9 @@ class ProfileTabViewController: UIViewController, UITableViewDelegate, UITableVi
         query1.getFirstObjectInBackground { (user, error) in
             if error == nil && user !=  nil{
                 self.userInfo = user!
+                self.tableView.reloadData()
             }
         }
-        //userInfo = try! query1.getFirstObject()
-        /*query1.findObjectsInBackground { (user, error) in
-            if error == nil && user !=  nil{
-                for i in user!{
-                    self.userInfo = i
-                }
-            }
-        }*/
-        
         
         let query2 = PFQuery(className: "Posts")
         query2.includeKey("author")
@@ -54,48 +46,45 @@ class ProfileTabViewController: UIViewController, UITableViewDelegate, UITableVi
             if posts !=  nil{
                 self.posts = posts!
                 self.tableView.reloadData()
+                self.profileRefresh.endRefreshing()
             }
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return self.posts.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0{
+        if indexPath.section == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell") as! ProfileCell
             cell.uNameLabel.text = currentUser.username
-            cell.nameLabel.text = userInfo["firstName"] as? String
-            cell.styleLabel.text = userInfo["style"] as? String
+            cell.nameLabel.text = "\(userInfo["firstName"] as? String ?? "") \(userInfo["lastName"] as? String ?? "")"
+            cell.styleLabel.text = "Style: \(userInfo["style"] as? String ?? "")"
             cell.profImg.image = userInfo["pimage"] as? UIImage
             
             let fileobj = userInfo["pimage"] as? PFFileObject
             let url = URL(string: fileobj?.url! ?? "https://static.thenounproject.com/png/125115-200.png")
             cell.profImg.af.setImage(withURL: url!)
-            
-            /*
-            let fileobj = userInfo["pimage"] as! PFFileObject
-            let url = URL(string: fileobj.url!)
-            cell.profImg.af.setImage(withURL: url!)
-            */
-            return cell
-        }else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfPostCell") as! ProfilePostCell
 
-            let post = posts[posts.count - (indexPath.row)]
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfPostCell") as! PostCell
+
+            let post = posts[posts.count - (indexPath.section)]
             
-            cell.postUser.text = currentUser.username
-            cell.postTitle.text = post["title"] as? String
-            cell.postPrice.text = "$\((post["price"] as? String) ?? "0")"
-            cell.postDesc.text = post["description"] as? String
+            cell.userLabel.text = currentUser.username
+            cell.titleLabel.text = post["title"] as? String
+            cell.priceLabel.text = "$\((post["price"] as? String) ?? "0")"
+            cell.descLabel.text = post["description"] as? String
             
             let imageFile = post["image"] as! PFFileObject
-            
             let imgurl = URL(string: imageFile.url!)!
-
-            cell.postimg.af.setImage(withURL: imgurl)
-            
+            cell.photoView.af.setImage(withURL: imgurl)
             
             return cell
         }

@@ -45,8 +45,17 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                 for i in users!{
                     try! i.delete()
                 }
-                }
             }
+        }
+        
+        /*for just removing one of the user profiles associated with a user (there should only be one available when calling this function)
+         
+         query.getFirstObjectInBackground { (item, error) in
+             if error == nil && item !=  nil{
+                 try! item!.delete()
+             }
+         }
+         */
         
         updatedUser["firstName"] = firstNameField.text!
         updatedUser["lastName"] = lastNameField.text!
