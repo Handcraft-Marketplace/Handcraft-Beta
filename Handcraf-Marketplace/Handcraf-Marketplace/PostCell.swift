@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Parse
+import AlamofireImage
 
 class PostCell: UITableViewCell {
 
@@ -15,6 +17,8 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     
+    var actionBlock: (() -> Void)?
+    //var actionBlock: (() -> Void)? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,4 +31,8 @@ class PostCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func CartButton(_ sender: Any) {
+        actionBlock?()
+    }
+    
 }

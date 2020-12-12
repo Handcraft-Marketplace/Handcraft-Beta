@@ -15,15 +15,16 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var posts = [PFObject]()
     let myRefreshControl = UIRefreshControl()
+    var cartQuery = [PFObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         // Do any additional setup after loading the view.
-        myRefreshControl.addTarget(self, action: #selector(viewDidAppear), for: .valueChanged)
-        tableView.refreshControl = myRefreshControl
+        self.myRefreshControl.addTarget(self, action: #selector(viewDidAppear), for: .valueChanged)
+        self.tableView.refreshControl = myRefreshControl
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -48,7 +49,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
+                
         let post = posts[posts.count - (indexPath.row + 1)]
         let user = post["author"] as! PFUser
         
@@ -63,9 +65,56 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         cell.photoView.af.setImage(withURL: imgurl)
         
+        cell.actionBlock = {
+            let cartItem = PFObject(className: "CartItems")
+            var quantity = 1
+            
+            let query1 = PFQuery(className: "CartItems")
+            query1.includeKey("cartOwner")
+            query1.whereKey("cartOwner", equalTo: PFUser.current()!)
+             
+            query1.findObjectsInBackground { (items, error) in
+                if error == nil && items !=  nil{
+                    self.cartQuery = items!
+                    for i in items! {
+                        let stuff = i["postObj"] as! PFObject
+                        if stuff.objectId == post.objectId!{
+                            try! i.delete()
+                        }
+                    }
+                }
+            }
+            
+            for i in self.cartQuery {
+                let stuff = i["postObj"] as! PFObject
+                if stuff.objectId == post.objectId! {
+                    quantity = i["quantity"] as! Int
+                    quantity += 1
+                    //try! i.delete()
+                    //i["quantity"] = quantity
+                } else { quantity = 1 }
+            }
+            
+            cartItem["quantity"] = quantity
+            cartItem["postObj"] = post
+            cartItem["cartOwner"] = PFUser.current()
+             
+            cartItem.saveInBackground { (success, error) in
+                if success{
+                    print("Saved!")
+                } else{
+                    print("Error!")
+                }
+            }
+        }
         
         return cell
     }
+    
+    
+
+    
+    
     
     @IBAction func onLogoutButton(_ sender: Any) {
         PFUser.logOut()
@@ -96,7 +145,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             detailsViewController.post = post
             
-            tableView.deselectRow(at: indexPath, animated: true)
+            self.tableView.deselectRow(at: indexPath, animated: true)
         }
 
     }
